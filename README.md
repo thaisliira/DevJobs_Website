@@ -1,6 +1,6 @@
-# 🌌 SudoHired — Talent & Job Management Platform (Dark Mode)
+# 🌌 DevJobs — Talent & Job Management Platform (Dark Mode)
 
-SudoHired é uma plataforma de gestão de talentos desenhada com uma estética **High-End Dark Mode**.  
+DevJobs é uma plataforma de gestão de talentos desenhada com uma estética **High-End Dark Mode**.  
 O foco do projeto é a experiência do **administrador**, permitindo gerir empresas parceiras e publicar vagas com **requisitos claros** e **work type** (Remote / Hybrid / On-site).
 
 ---
@@ -33,10 +33,9 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
 
 ---
 
-## 🎥 Demo
+## 🎥 Visualização
 
-- **Vídeo:**   
-- **GIF do Dashboard:** 
+- Em desenvolvimento
 ---
 
 ## 📚 Objetivo Educacional
@@ -46,3 +45,9 @@ Este projeto foi desenvolvido durante o percurso de **Software Developer no Cesa
 - **Arquitetura MVC**: separação clara entre dados, lógica e views.
 - **Segurança**: proteção de rotas, validação e sanitização de inputs.
 - **UX/UI (Dark First)**: interfaces consistentes e confortáveis em ambientes escuros.
+
+---
+
+## Autor
+
+Thaís Lira
