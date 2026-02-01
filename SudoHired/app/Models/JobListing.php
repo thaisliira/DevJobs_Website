@@ -10,12 +10,18 @@ class JobListing extends Model
         'title', 
         'image', 
         'salary', 
+        'description', 
+        'work_type', 
+        'requirements', 
         'release_date', 
         'inscription_end_date', 
         'company_id'
-    ];
+        ];
 
-    // funcao de relacionamento e que cada vaga pertence a uma unica empresa
+    /**
+     * funcao de relacionamento e que cada vaga pertence a uma unica empresa
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<Company, JobListing>
+     */
     public function company()
     {
         return $this->belongsTo(Company::class);

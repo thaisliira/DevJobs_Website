@@ -72,8 +72,8 @@ return [
     | and the user is authenticated. You are free to change this value.
     |
     */
-
-    'home' => '/home',
+//  para alterar a minha rota apos o user fazer login
+    'home' => '/all-companies',
 
     /*
     |--------------------------------------------------------------------------
