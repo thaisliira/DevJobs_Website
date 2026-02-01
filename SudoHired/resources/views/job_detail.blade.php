@@ -28,12 +28,25 @@
         </div>
 
         <div class="d-flex gap-3">
-            <button class="btn-neon-purple px-5 py-2 fw-bold">
-                <i class="bi bi-send me-2"></i> Candidatar-me
-            </button>
+            <form action="{{ route('jobs.apply', $job->id) }}" method="POST" enctype="multipart/form-data" id="applyForm">
+                @csrf
+                <div class="d-flex flex-column align-items-center gap-3">           
+                    <input type="file" name="resume" id="resume" accept=".pdf" style="display: none;" onchange="this.form.submit()">
+                    <button type="button" class="btn-neon-purple px-5 py-2 fw-bold" onclick="document.getElementById('resume').click()">
+                        <i class="bi bi-send me-2"></i> Candidatar-me
+                    </button>        
+                </div>
+            </form>
             <button class="btnx btnx--ghost px-4 py-2">
                 <i class="bi bi-heart me-2"></i> Guardar vaga
             </button>
+             @if(session('message'))
+                <div class="alert alert-success mt-3 py-2 border-0 d-flex align-items-center" 
+                    style="background: rgba(0, 255, 133, 0.1); color: #00ff85; border-radius: 12px;">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    <span class="small fw-bold">{{ session('message') }}</span>
+                </div>
+            @endif
         </div>
     </div>
 

@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use App\Models\JobListing;
+use App\Models\Application;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class JobListingController extends Controller
@@ -121,5 +123,25 @@ class JobListingController extends Controller
     $companies = Company::all();
 
     return view('jobslist', compact('jobs', 'companies'));
+}
+
+public function apply(Request $request, $id)
+{
+    $request->validate([
+        'resume' => 'required|mimes:pdf'
+    ]);
+
+    if ($request->hasFile('resume')) {
+        $path = Storage::putFile('cvs', $request->file('resume'));
+
+        DB::table('applications')->insert([
+            'job_listing_id' => $id,
+            'user_id' => Auth::id(),
+            'resume_path' => $path,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        return back()->with('message', 'Candidatura enviada com sucesso! Boa sorte.');
+    }
 }
 }

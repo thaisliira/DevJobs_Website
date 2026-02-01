@@ -29,9 +29,13 @@
                         <a href="{{ route('jobs.index') }}" class="nav-link-dashboard active">
                             <i class="bi bi-briefcase me-2"></i> Vagas
                         </a>
-                        <a href="#" class="nav-link-dashboard">
-                            <i class="bi bi-file-earmark-text me-2" aria-disabled="true"></i> Candidaturas
-                        </a>
+                       @auth
+                            @if(Auth::user()->is_admin)
+                                <a href="{{ route('applications.index') }}" class="nav-link-dashboard">
+                                    <i class="bi bi-file-earmark-text me-2"></i> Candidaturas
+                                </a>
+                            @endif
+                        @endauth
                     </nav>
 
                     <hr class="my-4" style="border-color: rgba(255,255,255,0.05)">

@@ -31,7 +31,7 @@
                     </form>
                 @else
                     <a class="nav-linkish" href="{{ route('login') }}">Login</a>
-                    <a class="btn btn-neon-purple btn-sm" href="{{ route('register') }}">Registar</a>
+                    <a class="btn btn-neon-purple btn-sm" href="{{ route('register') }}">Registrar</a>
                 @endauth
             </nav>
         </div>

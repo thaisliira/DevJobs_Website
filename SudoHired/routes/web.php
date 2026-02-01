@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\CompanyController;
@@ -60,6 +61,19 @@ Route::get('/company/{id}/jobs', [CompanyController::class, 'showJobs'])->name('
  */
 Route::get('/job/{id}', [JobListingController::class, 'showJobDetail'])->name('jobsid.show');
 
+/**
+ * Rota pra postar cv do usuario
+ */
+Route::post('/jobs/{id}/apply', [JobListingController::class, 'apply'])->name('jobs.apply')->middleware('auth');
+
+/**
+ * Rota que exibe as candidaturas para as vagas
+ */
+Route::get('/applications', [ApplicationController::class, 'index'])->name('applications.index')->middleware('auth');
+/**
+ * Rota que faz o download do cv do candidato
+ */
+Route::get('/application/{id}/download', [ApplicationController::class, 'downloadResume'])->name('application.download')->middleware('auth');
 /**
  * Rota para pagina nao encontrada
  */
