@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Company;
 use App\Models\JobListing;
 use App\Models\Application;
@@ -30,7 +29,6 @@ class JobListingController extends Controller
      */
     public function showJobDetail($id) {
     $job = JobListing::with('company')->findOrFail($id);
-
     return view('job_detail', compact('job'));
 }
 
@@ -59,8 +57,7 @@ class JobListingController extends Controller
             $image = $currentJob->image;
         }
 
-        DB::table('job_listings')
-        ->where('id', $request->id)
+        JobListing::where('id', $request->id)
         ->update([
             'title'                => $request->title,
             'salary'               => $request->salary,
@@ -100,10 +97,10 @@ class JobListingController extends Controller
         'work_type'    => $request->work_type,
         'image'        => $request->image,
         'company_id'   => $request->company_id,
+        // permite enviar no formato correto para BD YYYY-MM-DD
         'release_date' => now()->toDateString(),
         'inscription_end_date' => $request->inscription_end_date,
     ]);
-
     return redirect()->route('jobs.index')->with('message', 'Vaga criada com sucesso!');
     }
 
@@ -113,7 +110,7 @@ class JobListingController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function deleteJob($id) {
-        DB::table('job_listings')->where('id', $id)->delete();
+        JobListing::where('id', $id)->delete();
         return back()->with('success', 'Vaga eliminada com sucesso!');
     }
 
@@ -134,7 +131,7 @@ public function apply(Request $request, $id)
     if ($request->hasFile('resume')) {
         $path = Storage::putFile('cvs', $request->file('resume'));
 
-        DB::table('applications')->insert([
+        Application::insert([
             'job_listing_id' => $id,
             'user_id' => Auth::id(),
             'resume_path' => $path,

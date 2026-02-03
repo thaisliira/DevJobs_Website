@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('resume_path');
             $table->timestamps();
 // chaves estrangeiras que ligam a candidatura a vaga e ao user
+// apagando a vaga, as candidaturas tambem sao apagadas, o mesmo acontece se o user for apagado
     $table->foreign('job_listing_id')->references('id')->on('job_listings')->onDelete('cascade');
     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

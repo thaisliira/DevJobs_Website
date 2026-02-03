@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('job_listings', function (Blueprint $table) {
+            // alterando a tabela para não ser obrigatório
              $table->date('release_date')->nullable()->change();
         });
     }

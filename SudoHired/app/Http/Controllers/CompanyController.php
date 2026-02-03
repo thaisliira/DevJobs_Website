@@ -37,9 +37,10 @@ class CompanyController extends Controller
 
     $photo = null;
     if($request->hasFile('logo')){
-    $photo = Storage::putFile('companyPhotos', $request->file('logo'), 'public');
+    $photo = Storage::putFile('companyPhotos', $request->file('logo'));
     }
 
+    // no create ele ja cria automaticamente o created_at e updated_at
     Company::create([
         'name' => $request->name,
         'description' => $request->description,
@@ -64,17 +65,14 @@ class CompanyController extends Controller
             $logo = Storage::putFile('companyPhotos', $request->file('logo'));
         }
 
-        DB::table('companies')
-        ->where('id', $request->id)
-        ->update([
-            'name' =>$request->name,
-            'description' =>$request->description,
-            'logo' =>$logo,
-            'city'=> $request->city,
-            'updated_at'=> now(),
+        Company::where('id', $request->id)->update([
+            'name'        => $request->name,
+            'description' => $request->description,
+            'logo'        => $logo,
+            'city'        => $request->city,
         ]);
 
-    return redirect()->route('companies.index')->with('message', 'Empresa editada com sucesso!');
+    return redirect()->route('companies.index');
     }
 
     /**
