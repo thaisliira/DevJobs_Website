@@ -1,4 +1,4 @@
-# 🌌 DevJobs — Talent & Job Management Platform (Dark Mode)
+# 🌌 DevJobs — Talent & Job Management Platform
 
 DevJobs é uma plataforma de gestão de talentos desenhada com uma estética **High-End Dark Mode**.  
 O foco do projeto é a experiência do **administrador**, permitindo gerir empresas parceiras e publicar vagas com **requisitos claros** e **work type** (Remote / Hybrid / On-site).
@@ -35,19 +35,35 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
 
 ## 🎥 Visualização
 
-- Em desenvolvimento
+<p align="center">
+  <img src="DEMO/homepage.png" width="900" alt="Home DevJobs">
+</p>
+
+<p align="center">
+  <img src="DEMO/gestao_empresas.png" width="900" alt="Gestao de Empresas">
+</p>
+
+<p align="center">
+  <img src="DEMO/vaga_detalhe.png" width="900" alt="Vaga Detalhada">
+</p>
+
+<p align="center">
+  <img src="DEMO/user_page.png" width="900" alt="Página do Usuário">
+</p>
+
 ---
 
-## 📚 Objetivo Educacional
+## 🚀 Como rodar o projeto
 
-Este projeto foi desenvolvido durante o percurso de **Software Developer no Cesae Digital**, como estudo prático de:
-
-- **Arquitetura MVC**: separação clara entre dados, lógica e views.
-- **Segurança**: proteção de rotas, validação e sanitização de inputs.
-- **UX/UI (Dark First)**: interfaces consistentes e confortáveis em ambientes escuros.
+- **Clone o repositório:** git clone https://github.com/thaisliira/DevJobs_Website.git
+- **Instale as dependências:** composer install
+- **Configure** o .env com a sua base de dados MySQL.
+- **Gere a chave da aplicação:** php artisan key:generate
+- **Execute as migrations:** php artisan migrate
+- **Crie o link para imagens:** php artisan storage:link
 
 ---
 
-## Autor
+## ✍️ Autor
 
 Thaís Lira
