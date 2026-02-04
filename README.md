@@ -64,6 +64,20 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
 
 ---
 
+## 🚀 Acesso
+
+- **Admin:** admin@gmail.com | senha: 123456789
+
+- **User:** user@gmail.com | senha:987654321
+
+---
+
+## ⚠️ Observação
+
+Projeto em processo de melhoria contínua com adição de novas funcionalidades;
+
+---
+
 ## ✍️ Autor
 
 Thaís Lira
