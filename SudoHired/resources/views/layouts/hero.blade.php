@@ -10,7 +10,7 @@
         </h1>
         <p class="hero-subtitle mb-5">
             Descobre empresas tecnológicas de ponta e vagas que combinam <br class="d-none d-md-block">
-            com o teu perfil. Plataforma premium com as melhores <br class="d-none d-md-block">
+            com o teu perfil. Plataforma com as melhores <br class="d-none d-md-block">
             oportunidades em Portugal.
         </p>
 
@@ -27,6 +27,7 @@
     <div class="row g-4 justify-content-center text-center">
         <div class="col-md-3">
             <div class="stat-card">
+                <!-- variáveis definidas no HeroController -->
                 <h2 class="stat-number">{{ $totalCompanies }}+</h2>
                 <p class="stat-label">Empresas</p>
             </div>
@@ -64,6 +65,7 @@
                     @endif
                 </div>
                 <h4 class="card-title">{{ $company->name }}</h4>
+                <!-- limite para a descriçao -->
                 <p class="card-text">{{ Str::limit($company->description, 80) }}</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto">
                     <span class="badge-vagas">{{ $company->jobs_count }} vagas</span>

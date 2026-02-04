@@ -14,7 +14,6 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-
             <div class="mb-3">
                 <label for="name" class="form-label-custom">Nome Completo</label>
                 <div class="input-group-custom">

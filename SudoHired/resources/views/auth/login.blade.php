@@ -1,5 +1,4 @@
 @extends('layouts.home')
-
 @section('content')
 <div class="auth-container d-flex align-items-center justify-content-center">
     <div class="auth-card p-4 p-md-5">

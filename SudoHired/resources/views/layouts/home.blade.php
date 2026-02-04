@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'DevJobs')</title>
+    <link rel="icon" type="image/png" href="{{ asset('img/logodev.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/dev_theme.css') }}">
 </head>
 
 <body class="app-body">
-
     <header class="app-nav">
         <div class="container d-flex align-items-center justify-content-between py-3">
             <a class="brand d-flex align-items-center gap-2 text-decoration-none" href="{{ url('/') }}">
@@ -22,9 +22,9 @@
                 <a class="nav-linkish" href="{{ route('companies.index') }}">Empresas</a>
                 <a class="nav-linkish" href="{{ route('jobs.index') }}">Vagas</a>
 
+                <!-- verifica se tem algum user logado e aparece o nome ou se nao estiver, mostra os botoes de login e registrar -->
                 @auth
                     <span class="nav-muted">Olá, <b>{{ Auth::user()->name }}</b></span>
-
                     <form method="POST" action="{{ route('logout') }}" class="m-0">
                         @csrf
                         <button type="submit" class="btn btn-outline-custom btn-sm">Sair</button>
@@ -37,6 +37,7 @@
         </div>
     </header>
 
+    <!-- onde o conteudo das paginas filhas vai aparecer -->
     <main class="app-main">
         @yield('content')
     </main>
@@ -59,8 +60,8 @@
                 <h6 class="footer-title">Links Rápidos</h6>
                 <ul class="list-unstyled footer-links mb-0">
                     <li><a href="{{ route('companies.index') }}">Empresas</a></li>
-                    <li><a href="{{ url('/jobs') }}">Vagas</a></li>
-                    <li><a href="{{ url('login') }}">Login</a></li>
+                    <li><a href="{{ route('jobs.index') }}">Vagas</a></li>
+                    <li><a href="{{ route('login') }}">Login</a></li>
                 </ul>
             </div>
 
