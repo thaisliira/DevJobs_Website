@@ -9,9 +9,9 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
 
 | Recurso | Descrição |
 |---|---|
-| 🏢 **Company Hub** | Registo e gestão de empresas com upload de logo e descrição. |
+| 🏢 **Company Hub** | Registro e gestão de empresas com upload de logo.  |
 | ⚡ **Job Factory** | Criação de vagas com **enum** de regime: `remote`, `hybrid`, `onsite`. |
-| 💎 **UI Premium** | Interface “Dark First”, inspirada em **Glassmorphism**, com tons de **Roxo Neon** e **Ciano**. |
+| 💎 **UI Premium** | Interface “Dark” com tons de **Roxo Neon** e **Ciano**. |
 | 📊 **Engine CRUD** | Gestão completa via **Eloquent ORM** e **Query Builder**. |
 | 📁 **Storage System** | Integração com filesystem para media público (`storage:link`). |
 | 🔐 **Acesso por Perfil** | Rotas protegidas + permissões (Admin / Utilizador). |
@@ -27,10 +27,9 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
 
 ### Frontend & UI
 - **Blade**
-- **Custom Modern CSS** (inspirado em Linear / Track+)
+- **Custom Modern CSS**
 - **Bootstrap (Grid + Modals)** — sem depender do tema visual do Bootstrap
-- **Bootstrap Icons** (e opcional: FontAwesome)
-
+- **Bootstrap Icons** 
 ---
 
 ## 🎥 Visualização
