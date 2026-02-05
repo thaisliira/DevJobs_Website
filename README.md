@@ -63,7 +63,7 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
 
 ---
 
-## 🚀 Acesso
+## 🔒 Acesso
 
 - **Admin:** admin@gmail.com | senha: 123456789
 
