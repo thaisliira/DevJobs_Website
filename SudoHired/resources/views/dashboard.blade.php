@@ -88,7 +88,7 @@
                                     @if($company->logo)
                                         <img src="{{ asset('storage/' . $company->logo) }}" width="40" height="40" class="avatar" style="object-fit: cover;">
                                     @else
-                                        <img src="https://placehold.co/40" width="40" height="40" class="avatar">
+                                        <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/3586230-sem-foto-sinal-adesivo-com-texto-inscricao-no-fundo-isolado-gratis-vetor.jpg" width="40" height="40" class="avatar">
                                     @endif
                                 </td>
                                 <td><strong>{{ $company->name }}</strong></td>
@@ -168,7 +168,13 @@
                                                 <p class="muted">Apagar <strong>{{ $company->name }}</strong> e vagas associadas?</p>
                                                 <div class="modal-footer modalx__footer d-flex justify-content-center">
                                                     <button type="button" class="btnx btnx--ghost" data-bs-dismiss="modal">Cancelar</button>
-                                                    <a href="{{ route('companies.delete', $company->id) }}" class="btnx btnx--danger btnx--wide">Apagar tudo</a>
+                                                    <form action="{{ route('companies.delete', $company->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE') 
+                                                        <button type="submit" class="btnx btnx--danger btnx--wide">
+                                                            Apagar tudo
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,5 +241,4 @@
         </div>
     @endif
 @endauth
-
 @endsection

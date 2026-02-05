@@ -199,7 +199,14 @@
                                                 <p class="muted">Isto apagará <strong>{{ $job->title }}</strong>.</p>
                                                 <div class="modal-footer modalx__footer d-flex justify-content-center">
                                                     <button type="button" class="btnx btnx--ghost" data-bs-dismiss="modal">Cancelar</button>
-                                                    <a href="{{ route('jobs.delete', $job->id) }}" class="btnx btnx--danger btnx--wide">Apagar tudo</a>
+                                                    <form action="{{ route('jobs.delete', $job->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        
+                                                        <button type="submit" class="btnx btnx--danger btnx--wide">
+                                                            Apagar Vaga
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>

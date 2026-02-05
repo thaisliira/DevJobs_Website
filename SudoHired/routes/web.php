@@ -39,12 +39,12 @@ Route::get('/all-companies', [CompanyController::class, 'index'])->name('compani
 /**
  * Rota para que o botao delete apague as empresas
  */
-Route::get('/delete-company/{id}', [CompanyController::class, 'deleteCompany'])->name('companies.delete')->middleware('auth');
+Route::delete('/delete-company/{id}', [CompanyController::class, 'deleteCompany'])->name('companies.delete')->middleware('auth');
 
 /**
  * Rota para que o botao delete apague as vagas
  */
-Route::get('/delete-job/{id}', [JobListingController::class, 'deleteJob'])->name('jobs.delete')->middleware('auth');
+Route::delete('/delete-job/{id}', [JobListingController::class, 'deleteJob'])->name('jobs.delete')->middleware('auth');
 
 /**
  * Rota para a listagem global de vagas

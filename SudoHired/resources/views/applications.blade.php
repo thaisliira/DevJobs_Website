@@ -1,7 +1,5 @@
 @extends('layouts.home')
-
 @section('content')
-
 <div class="container py-5">
     <div class="d-flex justify-content-between align-items-start mb-5">
         <div>
@@ -21,7 +19,6 @@
             <div class="col-lg-3">
                 <div class="stat-card p-4 mb-4">
                     <h6 class="footer-title mb-4"><i class="bi bi-people me-2"></i> Menu</h6>
-
                     <nav class="d-flex flex-column gap-2">
                         <a href="{{ route('companies.index') }}" class="nav-link-dashboard">
                             <i class="bi bi-building me-2"></i> Empresas
@@ -48,14 +45,13 @@
             </div>
         @endauth
 
+        <!-- a sidebar apenas aparece se o usuário estiver logado -->
         <div class="@auth col-lg-9 @endauth @guest col-12 @endguest">
-
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h3 class="section-title mb-0">
                     <i class="bi bi-folder2-open me-2"></i> Candidaturas Recebidas
                 </h3>
             </div>
-
             <div class="table-responsive mb-5">
                 <table class="tablex">
                     <thead>
@@ -73,7 +69,7 @@
                             <tr>
                                 <td>
                                     <strong>{{ $app->jobListing->title }}</strong>
-                                    <div class="small nav-muted">{{ $app->jobListing->company->name ?? 'Empresa' }}</div>
+                                    <div class="small nav-muted">{{ $app->jobListing->company->name }}</div>
                                 </td>
                                 
                                 <td>

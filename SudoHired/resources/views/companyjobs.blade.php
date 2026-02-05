@@ -52,7 +52,7 @@
                 <div class="job-actions text-md-end mt-3 mt-md-0">
                     <div class="mb-3">
                         <span class="text-secondary d-block small">📅 Expira em:</span>
-                        <!-- altera o formato da data  -->
+                        <!-- Carbon altera o formato da data com metodo format  -->
                         <span class="text-white small">{{ \Carbon\Carbon::parse($job->inscription_end_date)->format('d/m/Y') }}</span>
                     </div>
                     <a href="{{ route('jobsid.show', $job->id) }}" class="btn-nebula px-4">Ver Detalhes →</a>
