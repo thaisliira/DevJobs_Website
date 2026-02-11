@@ -46,10 +46,6 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
   <img src="DEMO/vaga_detalhe.png" width="900" alt="Vaga Detalhada">
 </p>
 
-<p align="center">
-  <img src="DEMO/user_page.png" width="900" alt="Página do Usuário">
-</p>
-
 ---
 
 ## 🚀 Como rodar o projeto
