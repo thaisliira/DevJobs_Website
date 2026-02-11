@@ -34,7 +34,21 @@ O foco do projeto é a experiência do **administrador**, permitindo gerir empre
 
 ## 🎥 Visualização
 
+<p align="center">
+  <img src="DEMO/homepage.png" width="900" alt="Home DevJobs">
+</p>
 
+<p align="center">
+  <img src="DEMO/gestao_empresas.png" width="900" alt="Gestao de Empresas">
+</p>
+
+<p align="center">
+  <img src="DEMO/vaga_detalhe.png" width="900" alt="Vaga Detalhada">
+</p>
+
+<p align="center">
+  <img src="DEMO/user_page.png" width="900" alt="Página do Usuário">
+</p>
 
 ---
 
