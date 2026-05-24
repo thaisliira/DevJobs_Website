@@ -27,6 +27,8 @@ Built with a modern **High-End Dark UI**, DevJobs allows administrators to manag
 
 ---
 
+<a id="features"></a>
+
 ## ✨ Features
 
 | Feature | Description |
@@ -39,6 +41,8 @@ Built with a modern **High-End Dark UI**, DevJobs allows administrators to manag
 | 🔐 **Role-Based Access** | Protected routes and permission system (Admin / User). |
 
 ---
+
+<a id="tech-stack"></a>
 
 ## 🛠️ Tech Stack
 
@@ -55,6 +59,8 @@ Built with a modern **High-End Dark UI**, DevJobs allows administrators to manag
 
 ---
 
+<a id="screenshots"></a>
+
 ## 🎥 Screenshots
 
 <p align="center">
@@ -70,6 +76,8 @@ Built with a modern **High-End Dark UI**, DevJobs allows administrators to manag
 </p>
 
 ---
+
+<a id="project-setup"></a>
 
 ## 🚀 Project Setup
 
@@ -122,6 +130,8 @@ http://127.0.0.1:8000
 
 ---
 
+<a id="access"></a>
+
 ## 🔒 Access
 
 | Role | Email | Password |
@@ -130,6 +140,8 @@ http://127.0.0.1:8000
 | **User** | `user@gmail.com` | `987654321` |
 
 ---
+
+<a id="notes"></a>
 
 ## 📝 Notes
 
